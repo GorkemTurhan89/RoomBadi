@@ -1,0 +1,33 @@
+Kullanıcıyı sil, daha sonra GEÇ butonuna basarak içeride logout gezebiliyor musun? Yorum vs yapınca yönlendiriyor mu?  +/
+
+
+
+Kayıt olurken ilan oluşuyor mu?
+
+Logout ve login ol +/
+
+Ev arıyorum checkbox düzgün çalışıyor mu? -/
+
+İlanı yayından kaldır/yayına al çalışıyor mu? +/
+
+İlanını sil yeni İlan oluştur.
+
+Profil ilanı oluşuyor mu?
+
+Mesajlaş, bildirim gidiyor mu?
+
+Arama yap. Autocomplete sonuçları düzgün geliyor mu?
+
+Arama sonuçları aşağıya indikçe yükleniyor mu
+
+Filtreler çalışıyor mu?
+
+İlan detay düzgün mü? Paylaş + , Beğen +, Engelle, Engeli kaldır , Kişiyi bildir
+
+Profil ve Ev ilanı sayfalarından mesaj gönderiliyor mu?
+
+Doping görünümleri düzgün mü?
+
+Ödeme çalışıyor mu?
+
+Banner çalışıyor mu? Linke yönlendiriyor mu?
