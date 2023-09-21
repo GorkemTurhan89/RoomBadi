@@ -7,7 +7,8 @@ Feature: AC1 User Able to Login
   Scenario:  TC01 Searchbox button must be seen when at least 3 char entered to the search box
     And click to "personalButton"
     And click to "girisYapButton"
+    And user waits for "3"
+    And user type in "phoneNumberArea" to "configphone"
     And click to "girisyapButtonInGirisYapMenu"
-    And user type in "countryPhoneAreaCodeSelection" to "+90"
-    And user type in "phoneNumberArea" to "399171941"
+    And user goes and checks the sms
     Then close WebSite

@@ -6,10 +6,7 @@ import io.cucumber.java.BeforeAll;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.it.Ma;
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
@@ -21,6 +18,9 @@ import utilities.Driver;
 import utilities.ReusableMethods;
 
 import java.time.Duration;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Set;
 
 import static org.junit.Assert.assertTrue;
 
@@ -56,6 +56,7 @@ public class MainPageStepDef extends ReusableMethods {
 
     @Given("close WebSite")
     public void closeTheWebcite() {
+        bekle(3);
         Driver.getDriver().close();
 
     }
@@ -112,6 +113,42 @@ public class MainPageStepDef extends ReusableMethods {
     public void userTypeInTo(String toWhere, String what) {
         WebElement buttonToSend = getElement(toWhere);
         wait.until(ExpectedConditions.visibilityOf(buttonToSend));
+        if(what.contains("configphone")){
+            what = ConfigReader.getProperty("userphonenumber");
+        }
         buttonToSend.sendKeys(what);
+    }
+
+    @And("user waits for {string}")
+    public void userWaitsFor(String second) {
+
+        int integersecond = Integer.parseInt(second);
+        bekle(integersecond);
+    }
+
+    @And("user goes and checks the sms")
+    public void userGoesAndChecksTheSms() {
+        HashMap<String,String> windowHandles =openNewWindowAndHandle();
+        Driver.getDriver().switchTo().window(windowHandles.get("SecondMessageWindowHandle"));
+        Driver.getDriver().get(ConfigReader.getProperty("messageUrl"));
+
+    }
+
+    private static HashMap<String,String> openNewWindowAndHandle() {
+        HashMap<String,String> handlesMap = new HashMap<>();
+        String mainWindowHandle = Driver.getDriver().getWindowHandle();
+        Driver.getDriver().switchTo().newWindow(WindowType.TAB);
+        Set<String> allHandles =Driver.getDriver().getWindowHandles();
+        String messageWindowHandle;
+        for (String a : allHandles){
+            if(a.equals(mainWindowHandle)){
+                System.out.println("First Main Window Handle:"+mainWindowHandle);
+                handlesMap.put("FirstMainWindowHandle",mainWindowHandle);
+            }else {
+                messageWindowHandle = a;
+                System.out.println("Second Message Window Handle"+messageWindowHandle);
+                handlesMap.put("SecondMessageWindowHandle",messageWindowHandle);
+            }
+        }return  handlesMap;
     }
 }
