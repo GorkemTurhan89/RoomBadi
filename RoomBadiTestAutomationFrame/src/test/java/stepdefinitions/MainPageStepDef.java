@@ -23,6 +23,7 @@ import utilities.ReusableMethods;
 import java.time.Duration;
 
 import static org.junit.Assert.assertTrue;
+
 //TODO Buton locatini güncelle
 public class MainPageStepDef extends ReusableMethods {
     @BeforeAll
@@ -34,9 +35,10 @@ public class MainPageStepDef extends ReusableMethods {
     public static void afterAll() {
         // Runs after all scenarios
     }
+
     Pages pages = new Pages();
     Faker faker = new Faker();
-   Wait<WebDriver> wait = new FluentWait<>(Driver.getDriver()).withTimeout(Duration.ofSeconds(10)).pollingEvery(Duration.ofSeconds(2)).withMessage("Ignoring No Such Element Exception").ignoring(NoSuchElementException.class);
+    Wait<WebDriver> wait = new FluentWait<>(Driver.getDriver()).withTimeout(Duration.ofSeconds(10)).pollingEvery(Duration.ofSeconds(2)).withMessage("Ignoring No Such Element Exception").ignoring(NoSuchElementException.class);
 
     @Given("user goes to {string}")
     public void user_goes_to(String url) {
@@ -44,15 +46,11 @@ public class MainPageStepDef extends ReusableMethods {
     }
 
 
-
     @Given("click to {string}")
     public void click_to(String button) throws InterruptedException {
-       Thread.sleep(3);
-
-        Driver.getDriver().findElement(By.cssSelector("a[href='/tr/roommates']")).click();
-
+        Thread.sleep(3);
         WebElement buttonToClick = getElement(button);
-     jsclick(buttonToClick);
+        buttonToClick.click();
 
     }
 
@@ -61,12 +59,14 @@ public class MainPageStepDef extends ReusableMethods {
         Driver.getDriver().close();
 
     }
+
     public void isVisible(String nameOfVisibleElement) {
         WebElement elementToDisplayed = getElement(nameOfVisibleElement);
-       wait.until(ExpectedConditions.visibilityOf(elementToDisplayed));
+        wait.until(ExpectedConditions.visibilityOf(elementToDisplayed));
         assertTrue(elementToDisplayed.isDisplayed());
 
     }
+
     public WebElement getElement(String elementName) {
         WebElement tempElement = null;
         switch (elementName) {
@@ -111,7 +111,7 @@ public class MainPageStepDef extends ReusableMethods {
     @And("user type in {string} to {string}")
     public void userTypeInTo(String toWhere, String what) {
         WebElement buttonToSend = getElement(toWhere);
-       wait.until(ExpectedConditions.visibilityOf(buttonToSend));
+        wait.until(ExpectedConditions.visibilityOf(buttonToSend));
         buttonToSend.sendKeys(what);
     }
 }

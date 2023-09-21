@@ -9,5 +9,5 @@ Feature: AC1 User Able to Login
     And click to "girisYapButton"
     And click to "girisyapButtonInGirisYapMenu"
     And user type in "countryPhoneAreaCodeSelection" to "+90"
-    And user type in "phoneNumberArea" to "5399171941"
+    And user type in "phoneNumberArea" to "399171941"
     Then close WebSite
