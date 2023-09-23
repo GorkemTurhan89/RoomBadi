@@ -22,4 +22,16 @@ public class MessagesGoogle {
 
     @FindBy(xpath = "//mws-message-wrapper")
     public List<WebElement> messagesInRegardedMFromMessager;
+
+    @FindBy(xpath = "//*[text()='Roombadi']")
+    public WebElement roomBadiMessageBoxTitleToClick;
+
+    @FindBy(xpath = "//h2[text()='Roombadi']")
+    public WebElement roomBadiMessageBoxTitleToConfirm;
+
+    @FindBy(css = "[class='msg-focus-element ng-star-inserted']")
+    public List<WebElement> roomBadiSendSMSs;
+
+
+
 }

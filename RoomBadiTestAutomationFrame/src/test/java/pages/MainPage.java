@@ -5,10 +5,13 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+import java.util.List;
+
 public class MainPage {
-    public MainPage(){
-        PageFactory.initElements(Driver.getDriver(),this);
+    public MainPage() {
+        PageFactory.initElements(Driver.getDriver(), this);
     }
+
     @FindBy(xpath = "//div[starts-with(@class,'relative inline-block text-left')]//button[starts-with(@id,'headlessui-menu-button-:r')]")
     public WebElement personalButton;
     @FindBy(xpath = "//h4[text()='Giriş Yap']/parent::button")
@@ -21,11 +24,21 @@ public class MainPage {
     public WebElement girisyapButtonInGirisYapMenu;
 
     //switch icons
-    @FindBy(xpath ="//img[@src=\'/assets/icons/home.svg\']/parent::a")
+    @FindBy(xpath = "//img[@src=\'/assets/icons/home.svg\']/parent::a")
     public WebElement houseIcon;
     @FindBy(xpath = "//img[@src=\'/assets/icons/face.svg\']/parent::a")
     public WebElement faceIcon;
     @FindBy(xpath = "//div[starts-with(@class,'relative hidden h-11 max-w-full grow rounded-lg text-base ')]//div[starts-with(@id,'headlessui-combobox-button')]/input")
     public WebElement searchBox;
 
+
+    //RoomBadi sms entry page
+
+    @FindBy(xpath = "//form[@data-gtm-form-interact-id='1']//input[@data-gtm-form-interact-field-id='1']")
+    public WebElement firstSpaceToSendSMS;
+    @FindBy(xpath = "//form[@data-gtm-form-interact-id='1']//input")
+    public List<WebElement> listofSpaceToSendSMS;//use if firstSpaceToSendSMS not works;
+
+    @FindBy(xpath = "//div[@class='mt-5']/button")
+    public WebElement numaraniziDogrulayinButton;
 }

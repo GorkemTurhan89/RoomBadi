@@ -10,5 +10,7 @@ Feature: AC1 User Able to Login
     And user waits for "3"
     And user type in "phoneNumberArea" to "configphone"
     And click to "girisyapButtonInGirisYapMenu"
+    Given user opens phone
     And user goes and checks the sms
     Then close WebSite
+    And click to "personalButton"
