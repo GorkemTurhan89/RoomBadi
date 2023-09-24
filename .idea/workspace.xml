@@ -42,19 +42,19 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="stepdefinitions" />
       <recent name="utilities" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.appium03gestureanative.test">
-    <configuration name="Scenario: TC01 Searchbox button must be seen when at least 3 char entered to the search box" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Cucumber Java.Scenario: TC02a User who lend a house login">
+    <configuration name="Feature: US_AC1_UserLogsInAndLogsOut" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/RoomBadiTestAutomationFrame/src/test/resources/US_AC1_UserLogsInAndLogsOutMobile.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/RoomBadiTestAutomationFrame/src/test/resources/US_AC1_UserLogsInAndLogsOut.feature" />
       <option name="GLUE" value="stepdefinitions" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="RoomBadiTestAutomationFrame" />
-      <option name="NAME_FILTER" value="^TC01 Searchbox button must be seen when at least 3 char entered to the search box$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC01 Searchbox button must be seen when at least 3 char entered to the search box$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: TC01 Searchbox button must be seen when at least 3 char entered to the search box" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: US_AC1_UserLogsInAndLogsOut" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -66,75 +66,93 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="appium03gestureanative" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: TC02 user log in and then can log out" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/RoomBadiTestAutomationFrame/src/test/resources/US_AC1_UserLogsInAndLogsOut.feature" />
+      <option name="GLUE" value="stepdefinitions" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="RoomBadiTestAutomationFrame" />
+      <option name="NAME_FILTER" value="^TC02 user log in and then can log out$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC02 user log in and then can log out$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: TC02 user log in and then can log out" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="utilities.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="utilities" />
-      <option name="MAIN_CLASS_NAME" value="utilities.appium03gestureanative" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="appium03gestureanative2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: TC02a User login" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/RoomBadiTestAutomationFrame/src/test/resources/US_AC1_UserLogsInAndLogsOut.feature" />
+      <option name="GLUE" value="stepdefinitions" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="RoomBadiTestAutomationFrame" />
+      <option name="NAME_FILTER" value="^TC02a User login$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC02a User login$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: TC02a User login" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="utilities.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="utilities" />
-      <option name="MAIN_CLASS_NAME" value="utilities.appium03gestureanative2" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="appium03gestureanative2.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: TC02a User who lend a house login" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/RoomBadiTestAutomationFrame/src/test/resources/US_AC1_UserLogsInAndLogsOut.feature" />
+      <option name="GLUE" value="stepdefinitions" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="RoomBadiTestAutomationFrame" />
+      <option name="NAME_FILTER" value="^TC02a User who lend a house login$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC02a User who lend a house login$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: TC02a User who lend a house login" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="utilities.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="utilities" />
-      <option name="MAIN_CLASS_NAME" value="utilities.appium03gestureanative2" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="appium03gestureanative.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: TC02a1 User who rent a house login" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/RoomBadiTestAutomationFrame/src/test/resources/US_AC1_UserLogsInAndLogsOut.feature" />
+      <option name="GLUE" value="stepdefinitions" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="RoomBadiTestAutomationFrame" />
+      <option name="NAME_FILTER" value="^TC02a1 User who rent a house login$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC02a1 User who rent a house login$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: TC02a1 User who rent a house login" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="utilities.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="utilities" />
-      <option name="MAIN_CLASS_NAME" value="utilities.appium03gestureanative" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.appium03gestureanative.test" />
-        <item itemvalue="JUnit.appium03gestureanative2.test" />
-        <item itemvalue="JUnit.appium03gestureanative" />
-        <item itemvalue="JUnit.appium03gestureanative2" />
-        <item itemvalue="Cucumber Java.Scenario: TC01 Searchbox button must be seen when at least 3 char entered to the search box" />
+        <item itemvalue="Cucumber Java.Scenario: TC02a User who lend a house login" />
+        <item itemvalue="Cucumber Java.Scenario: TC02a1 User who rent a house login" />
+        <item itemvalue="Cucumber Java.Scenario: TC02a User login" />
+        <item itemvalue="Cucumber Java.Scenario: TC02 user log in and then can log out" />
+        <item itemvalue="Cucumber Java.Feature: US_AC1_UserLogsInAndLogsOut" />
       </list>
     </recent_temporary>
   </component>
@@ -154,13 +172,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/RoomBadiTestAutomationFrame/src/test/java/utilities/appium03gestureanative.java</url>
-          <line>18</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/RoomBadiTestAutomationFrame/src/test/java/utilities/appium03gestureanative.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="3" />
+          <line>61</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/RoomBadiTestAutomationFrame/src/test/java/utilities/appium03gestureanative2.java</url>
@@ -170,6 +183,15 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/RoomBadiTestAutomationFrame/src/test/java/utilities/appium03gestureanative.java</url>
+          <line>25</line>
+          <properties class="utilities.appium03gestureanative" method="test">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

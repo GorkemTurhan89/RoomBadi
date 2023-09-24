@@ -24,9 +24,9 @@ public class MainPage {
     public WebElement girisyapButtonInGirisYapMenu;
 
     //switch icons
-    @FindBy(xpath = "//img[@src=\'/assets/icons/home.svg\']/parent::a")
+    @FindBy(xpath = "//img[@src='/assets/icons/home.svg']/parent::a")
     public WebElement houseIcon;
-    @FindBy(xpath = "//img[@src=\'/assets/icons/face.svg\']/parent::a")
+    @FindBy(xpath = "//img[@src='/assets/icons/face.svg']/parent::a")
     public WebElement faceIcon;
     @FindBy(xpath = "//div[starts-with(@class,'relative hidden h-11 max-w-full grow rounded-lg text-base ')]//div[starts-with(@id,'headlessui-combobox-button')]/input")
     public WebElement searchBox;
@@ -34,11 +34,16 @@ public class MainPage {
 
     //RoomBadi sms entry page
 
-    @FindBy(xpath = "//form[@data-gtm-form-interact-id='1']//input[@data-gtm-form-interact-field-id='1']")
-    public WebElement firstSpaceToSendSMS;
+    @FindBy(xpath = "//form//div//input")
+    public WebElement firstSpaceToSendSMS;//form[@data-gtm-form-interact-id='1']//input[@data-gtm-form-interact-field-id='1']
     @FindBy(xpath = "//form[@data-gtm-form-interact-id='1']//input")
     public List<WebElement> listofSpaceToSendSMS;//use if firstSpaceToSendSMS not works;
 
     @FindBy(xpath = "//div[@class='mt-5']/button")
     public WebElement numaraniziDogrulayinButton;
+
+    @FindBy(xpath = "//span[text()='Devam Et']/parent::button")
+    public WebElement devamEtButton;
+    @FindBy(xpath = "//span[text()='Çıkış Yap']/parent::button")
+    public WebElement cikisYapEtButton;
 }

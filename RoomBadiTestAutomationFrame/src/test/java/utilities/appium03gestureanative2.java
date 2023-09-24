@@ -39,6 +39,8 @@ public class appium03gestureanative2 {
         WebElement testAGestureTitle = driver.findElement(By.id("android:id/title"));
         assertTrue(testAGestureTitle.isDisplayed());
         System.out.println("test screen acildi...");
+
+
         driver.quit();
     }
 }

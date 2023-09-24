@@ -3,10 +3,17 @@ package stepdefinitions;
 import com.github.javafaker.Faker;
 
 
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.nativekey.KeyEvent;
+import io.appium.java_client.ios.IOSDriver;
+import io.appium.java_client.remote.MobileCapabilityType;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import org.junit.Test;
 import org.openqa.selenium.*;
 
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
@@ -17,16 +24,20 @@ import utilities.Driver;
 import utilities.DriverMobile;
 import utilities.ReusableMethods;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.time.Duration;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Set;
 
+import static io.appium.java_client.android.nativekey.AndroidKey.HOME;
 import static org.junit.Assert.assertTrue;
 
 //TODO Buton locatini güncelle
 public class MainPageStepDef extends ReusableMethods {
 
-
+    AppiumStepDef appiumStepDef = new AppiumStepDef();
     Pages pages = new Pages();
     Screens screens = new Screens();
     Faker faker = new Faker();
@@ -34,6 +45,7 @@ public class MainPageStepDef extends ReusableMethods {
 
     @Given("user goes to {string}")
     public void user_goes_to(String url) {
+        bekle(3);
         Driver.getDriver().get(ConfigReader.getProperty(url));
     }
 
@@ -49,7 +61,7 @@ public class MainPageStepDef extends ReusableMethods {
     @Given("close WebSite")
     public void closeTheWebcite() {
         bekle(3);
-        Driver.getDriver().close();
+        Driver.getDriver().quit();
 
     }
 
@@ -80,6 +92,15 @@ public class MainPageStepDef extends ReusableMethods {
                 break;
             case "numaraniziDogrulayinButton":
                 tempElement = pages.mainPage().numaraniziDogrulayinButton;
+                break;
+            case "devamEtButton":
+                tempElement = pages.mainPage().devamEtButton;
+                break;
+            case "cikisYapEtButton":
+                tempElement = pages.mainPage().cikisYapEtButton;
+                break;
+            case "faceIcon":
+                tempElement = pages.mainPage().faceIcon;
                 break;
         }
         return tempElement;
@@ -120,17 +141,6 @@ public class MainPageStepDef extends ReusableMethods {
         int integersecond = Integer.parseInt(second);
         bekle(integersecond);
     }
-
-    @And("user goes and checks the sms")//bu alan şu an icin kullanılmıyor tekrar kullanilabilir
-    public void userGoesAndChecksTheSms() {
-
-screens.mainScreen().mainMessagesIcon.click();
-
-    }
-
-
-
-
 
 
     //down not functional for now
@@ -173,8 +183,5 @@ screens.mainScreen().mainMessagesIcon.click();
         return handlesMap;
     }
 
-    @Given("user opens phone")
-    public void userOpensPhone() {
-        DriverMobile.getAppiumDriver();
-    }
+
 }

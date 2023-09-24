@@ -29,14 +29,14 @@ public class DriverMobile {
             desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, ConfigReader.getProperty("platformVersion"));
             desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, ConfigReader.getProperty("deviceName"));
             desiredCapabilities.setCapability(MobileCapabilityType.APP, ConfigReader.getProperty("appPath"));
-            desiredCapabilities.setCapability(MobileCapabilityType.NO_RESET, true);
             desiredCapabilities.setCapability("autoAcceptAlert", true);
-
+            desiredCapabilities.setCapability("appPackage", ConfigReader.getProperty("appPackage"));
+            desiredCapabilities.setCapability("appActivity", ConfigReader.getProperty("appActivity"));
+            desiredCapabilities.setCapability(MobileCapabilityType.NO_RESET, true);
 
             if (ConfigReader.getProperty("platformName").contains("Android")) {
                 //if you do not provide app path, so you should provide "appPackage" and "appActivity"
-                desiredCapabilities.setCapability("appPackage", ConfigReader.getProperty("appPackage"));
-                desiredCapabilities.setCapability("appActivity", ConfigReader.getProperty("appActivity"));
+
                 assert appiumServerURL != null;
                 appiumDriver = new AndroidDriver(appiumServerURL, desiredCapabilities);
             } else if (ConfigReader.getProperty("platformName").equals("iOS")) {
