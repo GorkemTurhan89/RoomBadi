@@ -102,6 +102,36 @@ public class MainPageStepDef extends ReusableMethods {
             case "faceIcon":
                 tempElement = pages.mainPage().faceIcon;
                 break;
+            case "yeniIlanButton":
+                tempElement = pages.mainPage().yeniIlanButton;
+                break;
+            case "sonrakiAdimButton":
+                tempElement = pages.yeniIlanPage().sonrakiAdimButton;
+                break;
+            case "neredeEvAriyorsun":
+                tempElement = pages.evDetaylari().neredeEvAriyorsun;
+                break;
+            case "neKadarKiraVerebilirsiniz":
+                tempElement = pages.evDetaylari().neKadarKiraVerebilirsiniz;
+                break;
+            case "kiraKuru":
+                tempElement = pages.evDetaylari().kiraKuru;
+                break;
+            case "depositoVarMi":
+                tempElement = pages.evDetaylari().depositoVarMi;
+                break;
+            case "kacAySureligineArkadasAra":
+                tempElement = pages.evDetaylari().kacAySureligineArkadasAra;
+                break;
+            case "kacKisi":
+                tempElement = pages.evDetaylari().kacKisi;
+                break;
+            case "depositoozelOdaVarMi":
+                tempElement = pages.evDetaylari().ozelOda;
+                break;
+            case "sonrakiAdim":
+                tempElement = pages.evDetaylari().sonrakiAdim;
+                break;
         }
         return tempElement;
     }

@@ -21,6 +21,9 @@ public class MainScreen {
     @AndroidFindBy(xpath = "//android.widget.ImageView[@content-desc='Chrome']")
     public WebElement chromeIcon;
 
+
+
+
 }
 
 

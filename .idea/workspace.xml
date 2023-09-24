@@ -46,7 +46,7 @@
       <recent name="utilities" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: TC02a User who lend a house login">
+  <component name="RunManager" selected="Cucumber Java.Scenario: TC02a1 User who rent a house login">
     <configuration name="Feature: US_AC1_UserLogsInAndLogsOut" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/RoomBadiTestAutomationFrame/src/test/resources/US_AC1_UserLogsInAndLogsOut.feature" />
@@ -148,8 +148,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Scenario: TC02a User who lend a house login" />
         <item itemvalue="Cucumber Java.Scenario: TC02a1 User who rent a house login" />
+        <item itemvalue="Cucumber Java.Scenario: TC02a User who lend a house login" />
         <item itemvalue="Cucumber Java.Scenario: TC02a User login" />
         <item itemvalue="Cucumber Java.Scenario: TC02 user log in and then can log out" />
         <item itemvalue="Cucumber Java.Feature: US_AC1_UserLogsInAndLogsOut" />

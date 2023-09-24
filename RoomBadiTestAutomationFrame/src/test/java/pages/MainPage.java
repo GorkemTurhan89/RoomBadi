@@ -46,4 +46,9 @@ public class MainPage {
     public WebElement devamEtButton;
     @FindBy(xpath = "//span[text()='Çıkış Yap']/parent::button")
     public WebElement cikisYapEtButton;
+
+
+    @FindBy(xpath = "//*[text()='Yeni İlan']")
+    public WebElement yeniIlanButton;
+
 }

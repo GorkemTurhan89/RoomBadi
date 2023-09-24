@@ -22,5 +22,23 @@ public class Pages {
         }
         return messagesGoogle;
     }
+
+    private YeniIlanPage yeniIlanPage;
+
+    public YeniIlanPage yeniIlanPage() {
+        if (yeniIlanPage == null) {
+            yeniIlanPage = new YeniIlanPage();
+        }
+        return yeniIlanPage;
+    }
+
+    private EvDetaylari evDetaylari;
+
+    public EvDetaylari evDetaylari() {
+        if (evDetaylari == null) {
+            evDetaylari = new EvDetaylari();
+        }
+        return evDetaylari;
+    }
 }
 //Step defition icerisinde fazla constructor kalabaligi olmamasi icin olusturulmustur
