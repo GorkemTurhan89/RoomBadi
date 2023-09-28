@@ -37,6 +37,9 @@ Feature: AC1 User Able to Login and log out
     Given user opens phone
     And user goes and checks the sms
     And click to "devamEtButton"
+    And checks the "kayitOlusturulduMessage"//eklenecek
+    And click to "tamamButton"
+
 
 
   Scenario:  TC02b User who lend a house in and then can log out

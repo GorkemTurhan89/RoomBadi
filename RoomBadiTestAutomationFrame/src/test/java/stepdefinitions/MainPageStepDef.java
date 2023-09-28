@@ -165,6 +165,12 @@ public class MainPageStepDef extends ReusableMethods {
             case "kaydet2":
                 tempElement = pages.signUpPage().kaydet2;
                 break;
+            case "kayitOlusturulduMessage":
+                tempElement = pages.signUpPage().kayitOlusturulduMessage;
+                break;
+            case "tamamButton":
+                tempElement = pages.signUpPage().tamamButton;
+                break;
         }
         return tempElement;
     }

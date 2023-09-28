@@ -32,4 +32,8 @@ public class SignUpPage {
     public WebElement smokingYes;
     @FindBy(xpath = "//span[text()='Kaydet']/parent::button")
     public WebElement kaydet2;
+    @FindBy(xpath = "///h5")
+    public WebElement kayitOlusturulduMessage;
+    @FindBy(xpath = "//*[text()='Tamam']/parent::button")
+    public WebElement tamamButton;
 }
