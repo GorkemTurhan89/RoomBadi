@@ -132,6 +132,39 @@ public class MainPageStepDef extends ReusableMethods {
             case "sonrakiAdim":
                 tempElement = pages.evDetaylari().sonrakiAdim;
                 break;
+            case "signUpName":
+                tempElement = pages.signUpPage().signUpName;
+                break;
+            case "signUpLastName":
+                tempElement = pages.signUpPage().signUpLastName;
+                break;
+            case "signUpEmail":
+                tempElement = pages.signUpPage().signUpEmail;
+                break;
+            case "birthDate":
+                tempElement = pages.signUpPage().birthDate;
+                break;
+            case "genderMale":
+                tempElement = pages.signUpPage().genderMale;
+                break;
+            case "nextButton":
+                tempElement = pages.signUpPage().nextButton;
+                break;
+            case "petInput":
+                tempElement = pages.signUpPage().petInput;
+                break;
+            case "misafirButton":
+                tempElement = pages.signUpPage().misafirButton;
+                break;
+            case "temizlikButton":
+                tempElement = pages.signUpPage().temizlikButton;
+                break;
+            case "smokingYes":
+                tempElement = pages.signUpPage().smokingYes;
+                break;
+            case "kaydet2":
+                tempElement = pages.signUpPage().kaydet2;
+                break;
         }
         return tempElement;
     }
@@ -214,4 +247,10 @@ public class MainPageStepDef extends ReusableMethods {
     }
 
 
+    @And("user type in {string} to chose one")
+    public void userTypeInToChoseOne(String toWhere) {
+        WebElement buttonToSend = getElement(toWhere);
+        wait.until(ExpectedConditions.visibilityOf(buttonToSend));
+        buttonToSend.sendKeys(Keys.DOWN, Keys.ENTER);
+    }
 }

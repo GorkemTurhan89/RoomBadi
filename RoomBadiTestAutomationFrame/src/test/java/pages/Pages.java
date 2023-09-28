@@ -40,5 +40,14 @@ public class Pages {
         }
         return evDetaylari;
     }
+
+    private SignUpPage signUpPage;
+
+    public SignUpPage signUpPage() {
+        if (signUpPage == null) {
+            signUpPage = new SignUpPage();
+        }
+        return signUpPage;
+    }
 }
 //Step defition icerisinde fazla constructor kalabaligi olmamasi icin olusturulmustur

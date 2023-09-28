@@ -46,7 +46,7 @@
       <recent name="utilities" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: TC02a1 User who rent a house login">
+  <component name="RunManager" selected="Cucumber Java.Scenario: TC01a Whether advert is created while signup">
     <configuration name="Feature: US_AC1_UserLogsInAndLogsOut" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/RoomBadiTestAutomationFrame/src/test/resources/US_AC1_UserLogsInAndLogsOut.feature" />
@@ -66,35 +66,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: TC02 user log in and then can log out" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: TC01a Whether advert is created while signup" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/RoomBadiTestAutomationFrame/src/test/resources/US_AC1_UserLogsInAndLogsOut.feature" />
       <option name="GLUE" value="stepdefinitions" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="RoomBadiTestAutomationFrame" />
-      <option name="NAME_FILTER" value="^TC02 user log in and then can log out$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC02 user log in and then can log out$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: TC02 user log in and then can log out" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Scenario: TC02a User login" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/RoomBadiTestAutomationFrame/src/test/resources/US_AC1_UserLogsInAndLogsOut.feature" />
-      <option name="GLUE" value="stepdefinitions" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="RoomBadiTestAutomationFrame" />
-      <option name="NAME_FILTER" value="^TC02a User login$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC02a User login$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: TC02a User login" />
+      <option name="NAME_FILTER" value="^TC01a Whether advert is created while signup$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC01a Whether advert is created while signup$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: TC01a Whether advert is created while signup" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -146,13 +126,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Scenario: TC02b User who lend a house in and then can log out" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/RoomBadiTestAutomationFrame/src/test/resources/US_AC1_UserLogsInAndLogsOut.feature" />
+      <option name="GLUE" value="stepdefinitions" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="RoomBadiTestAutomationFrame" />
+      <option name="NAME_FILTER" value="^TC02b User who lend a house in and then can log out$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^TC02b User who lend a house in and then can log out$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: TC02b User who lend a house in and then can log out" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Scenario: TC01a Whether advert is created while signup" />
+        <item itemvalue="Cucumber Java.Feature: US_AC1_UserLogsInAndLogsOut" />
+        <item itemvalue="Cucumber Java.Scenario: TC02b User who lend a house in and then can log out" />
         <item itemvalue="Cucumber Java.Scenario: TC02a1 User who rent a house login" />
         <item itemvalue="Cucumber Java.Scenario: TC02a User who lend a house login" />
-        <item itemvalue="Cucumber Java.Scenario: TC02a User login" />
-        <item itemvalue="Cucumber Java.Scenario: TC02 user log in and then can log out" />
-        <item itemvalue="Cucumber Java.Feature: US_AC1_UserLogsInAndLogsOut" />
       </list>
     </recent_temporary>
   </component>
