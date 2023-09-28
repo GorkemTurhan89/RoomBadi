@@ -26,7 +26,7 @@ Feature: AC1 User Able to Login and log out
     And click to "temizlikButton"
     And user type in "temizlikButton" to chose one
     And click to "smokingYes"
-    And user type in "kaydet2" to chose one
+    And click to "kaydet2"
 
   Scenario:  TC02a User who lend a house login
     And click to "personalButton"
