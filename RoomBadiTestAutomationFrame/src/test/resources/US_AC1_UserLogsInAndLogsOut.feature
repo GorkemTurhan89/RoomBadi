@@ -4,7 +4,7 @@ Feature: AC1 User Able to Login and log out
   Background:
     Given user goes to "roombadiURL"
 
-  Scenario:  TC01a Whether advert is created while signup
+  Scenario:  TC01a Whether advert is created while signup and then account deleted
     And user waits for "3"
     And click to "yeniIlanButton"
     And user waits for "3"
@@ -27,7 +27,9 @@ Feature: AC1 User Able to Login and log out
     And user type in "temizlikButton" to chose one
     And click to "smokingYes"
     And click to "kaydet2"
+    And change to "frame"
     And checks the "kayitOlusturulduMessage"
+    And change to "parentFrame"
     And click to "tamamButton"
     And click to "evOdaBulInSignUp"
     And click to "nextButton"
@@ -44,6 +46,64 @@ Feature: AC1 User Able to Login and log out
     And click to "hesabiSil"
     And alerti kabul et
 
+  Scenario: TC01b Hesap oluşturma
+    And user waits for "3"
+    And click to "yeniIlanButton"
+    And user waits for "3"
+    And user type in "phoneNumberArea" to "configphone"
+    And click to "girisyapButtonInGirisYapMenu"
+    Given user opens phone
+    And user goes and checks the sms
+    And click to "devamEtButton"
+    And user type in "signUpName" to "Denemeisim"
+    And user type in "signUpLastName" to "Denemesoyisim"
+    And user type in "signUpEmail" to "Deneme@email.com"
+    And user type in "birthDate" to "19091899"
+    And click to "genderMale"
+    And click to "nextButton"
+    And click to "petInput"
+    And user type in "petInput" to chose one
+    And click to "misafirButton"
+    And user type in "misafirButton" to chose one
+    And click to "temizlikButton"
+    And user type in "temizlikButton" to chose one
+    And click to "smokingYes"
+    And click to "kaydet2"
+    And change to "frame"
+    And checks the "kayitOlusturulduMessage"
+    And change to "parentFrame"
+    And click to "tamamButton"
+    And click to "evOdaBulInSignUp"
+    And click to "nextButton"
+    And user type in "odaMahalle" to "Kocaeli" and enters
+    And user type in "dateOfMove" to "31122023" and enters
+    And user type in "neKadarKalacaksiniz" to chose one
+    And user type in "kira" to "3000" and enters
+    And user type in "kuruSecin" to chose one
+    And user type in "yasAraligiSecin" to chose one
+    And user type in "arananCinsiyetiSecin" to chose one
+    And click to "tamamButton"
+
+
+  Scenario: TC01c Hesap silinebiliyor mu?
+    And user waits for "3"
+    And click to "yeniIlanButton"
+    And user waits for "3"
+    And user type in "phoneNumberArea" to "configphone"
+    And click to "girisyapButtonInGirisYapMenu"
+    Given user opens phone
+    And user goes and checks the sms
+    And click to "devamEtButton"
+    And click to "personalButton"
+    And click to "kisiselBilgilerim"
+    And user waits for "3"
+    And user schrolldown
+    And user waits for "3"
+    And click to "hesabiSil"
+    And alerti kabul et
+    And user waits for "3"
+    Then close WebSite
+
 
   Scenario:  TC02a User who lend a house login
     And click to "personalButton"
@@ -54,6 +114,7 @@ Feature: AC1 User Able to Login and log out
     Given user opens phone
     And user goes and checks the sms
     And click to "devamEtButton"
+    Then close WebSite
 
 
   Scenario:  TC02b User who lend a house in and then can log out

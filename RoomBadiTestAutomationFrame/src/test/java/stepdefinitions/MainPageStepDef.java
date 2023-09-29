@@ -188,7 +188,8 @@ public class MainPageStepDef extends ReusableMethods {
                 break;
             case "yasAraligiSecin":
                 tempElement = pages.signUpOdaBul().yasAraligiSecin;
-                break; case "arananCinsiyetiSecin":
+                break;
+            case "arananCinsiyetiSecin":
                 tempElement = pages.signUpOdaBul().arananCinsiyetiSecin;
                 break;
         }
@@ -296,12 +297,30 @@ public class MainPageStepDef extends ReusableMethods {
         if (what.contains("configphone")) {
             what = ConfigReader.getProperty("userphonenumber");
         }
-        buttonToSend.sendKeys(what + Keys.ARROW_DOWN+Keys.ENTER);
+        buttonToSend.sendKeys(what + Keys.ARROW_DOWN + Keys.ENTER);
 
     }
 
     @And("alerti kabul et")
     public void alertiKabulEt() {
         Driver.getDriver().switchTo().alert().accept();
+    }
+
+    @And("change to {string}")
+    public void changeTo(String arg0) {
+        switch (arg0) {
+            case "frame":
+                Driver.getDriver().switchTo().frame(0);
+                break;
+            case "parentFrame":
+                Driver.getDriver().switchTo().parentFrame();
+                break;
+
+        }
+    }
+
+    @And("user schrolldown")
+    public void userSchrolldown() {
+        scrollEnd();
     }
 }
