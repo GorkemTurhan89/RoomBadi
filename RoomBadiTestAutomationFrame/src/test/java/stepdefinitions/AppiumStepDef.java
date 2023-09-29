@@ -15,6 +15,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import screens.Screens;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -25,7 +26,7 @@ import static io.appium.java_client.android.nativekey.AndroidKey.HOME;
 import static org.junit.Assert.assertTrue;
 
 
-public class AppiumStepDef {
+public class AppiumStepDef extends ReusableMethods {
     @Given("user opens phone")
     public void userOpensPhone() throws MalformedURLException, InterruptedException {
         test();
@@ -36,10 +37,11 @@ public class AppiumStepDef {
         androidDriver.pressKey(new KeyEvent(HOME));
         androidDriver.findElement(By.xpath("//android.widget.ImageView[@content-desc='Mesajlar']")).click();
         androidDriver.findElement(By.xpath("//android.widget.TextView[@text='Roombadi']")).click();
+        bekle(2);
         List<WebElement> elementList = androidDriver.findElements(By.xpath("//android.widget.TextView[@resource-id='com.google.android.apps.messaging:id/message_text']"));
         WebElement smsElement = elementList.get(elementList.size()-1);
         String smsNumber = smsElement.getText().replaceAll("\\D", "");
-        Driver.getDriver().findElements(By.xpath("//form//div//input")).get(0).sendKeys(smsNumber);
+        Driver.getDriver().findElements(By.xpath("//form//div//input")).get(1).sendKeys(smsNumber);
         Driver.getDriver().findElement(By.xpath("//div[@class='mt-5']/button")).click();
         androidDriver.pressKey(new KeyEvent(BACK));
         androidDriver.pressKey(new KeyEvent(HOME));

@@ -24,10 +24,10 @@ public class MainPage {
     public WebElement girisyapButtonInGirisYapMenu;
 
     //switch icons
-    @FindBy(xpath = "//img[@src='/assets/icons/home.svg']/parent::a")
-    public WebElement houseIcon;
-    @FindBy(xpath = "//img[@src='/assets/icons/face.svg']/parent::a")
-    public WebElement faceIcon;
+    @FindBy(xpath = "//a[text()='Ev / Oda İlanları']")
+    public WebElement evOdaIlanlari;
+    @FindBy(xpath = "//a[text()='Ev Arkadaşı İlanları']")
+    public WebElement evArkadasIlanlari;
     @FindBy(xpath = "//div[starts-with(@class,'relative hidden h-11 max-w-full grow rounded-lg text-base ')]//div[starts-with(@id,'headlessui-combobox-button')]/input")
     public WebElement searchBox;
 
@@ -48,7 +48,7 @@ public class MainPage {
     public WebElement cikisYapEtButton;
 
 
-    @FindBy(xpath = "//*[text()='Yeni İlan']")
+    @FindBy(xpath = "//span[text()='Yeni İlan']/parent::button[starts-with(@class,'relative')]")
     public WebElement yeniIlanButton;
 
 }

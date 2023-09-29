@@ -3,17 +3,10 @@ package stepdefinitions;
 import com.github.javafaker.Faker;
 
 
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.nativekey.KeyEvent;
-import io.appium.java_client.ios.IOSDriver;
-import io.appium.java_client.remote.MobileCapabilityType;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
-import org.junit.Test;
 import org.openqa.selenium.*;
 
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
@@ -21,17 +14,12 @@ import pages.Pages;
 import screens.Screens;
 import utilities.ConfigReader;
 import utilities.Driver;
-import utilities.DriverMobile;
 import utilities.ReusableMethods;
 
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.time.Duration;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Set;
 
-import static io.appium.java_client.android.nativekey.AndroidKey.HOME;
 import static org.junit.Assert.assertTrue;
 
 //TODO Buton locatini güncelle
@@ -99,8 +87,11 @@ public class MainPageStepDef extends ReusableMethods {
             case "cikisYapEtButton":
                 tempElement = pages.mainPage().cikisYapEtButton;
                 break;
-            case "faceIcon":
-                tempElement = pages.mainPage().faceIcon;
+            case "evArkadasIlanlari":
+                tempElement = pages.mainPage().evArkadasIlanlari;
+                break;
+            case "evOdaIlanlari":
+                tempElement = pages.mainPage().evOdaIlanlari;
                 break;
             case "yeniIlanButton":
                 tempElement = pages.mainPage().yeniIlanButton;
@@ -170,6 +161,35 @@ public class MainPageStepDef extends ReusableMethods {
                 break;
             case "tamamButton":
                 tempElement = pages.signUpPage().tamamButton;
+                break;
+            case "evOdaBulInSignUp":
+                tempElement = pages.signUpPage().evOdaBulInSignUp;
+                break;
+            case "odaMahalle":
+                tempElement = pages.signUpOdaBul().odaMahalle;
+                break;
+            case "kisiselBilgilerim":
+                tempElement = pages.profiliGoster().kisiselBilgilerim;
+                break;
+            case "hesabiSil":
+                tempElement = pages.profiliGoster().hesabiSil;
+                break;
+            case "dateOfMove":
+                tempElement = pages.signUpOdaBul().dateOfMove;
+                break;
+            case "neKadarKalacaksiniz":
+                tempElement = pages.signUpOdaBul().neKadarKalacaksiniz;
+                break;
+            case "kira":
+                tempElement = pages.signUpOdaBul().kira;
+                break;
+            case "kuruSecin":
+                tempElement = pages.signUpOdaBul().kuruSecin;
+                break;
+            case "yasAraligiSecin":
+                tempElement = pages.signUpOdaBul().yasAraligiSecin;
+                break; case "arananCinsiyetiSecin":
+                tempElement = pages.signUpOdaBul().arananCinsiyetiSecin;
                 break;
         }
         return tempElement;
@@ -258,5 +278,30 @@ public class MainPageStepDef extends ReusableMethods {
         WebElement buttonToSend = getElement(toWhere);
         wait.until(ExpectedConditions.visibilityOf(buttonToSend));
         buttonToSend.sendKeys(Keys.DOWN, Keys.ENTER);
+    }
+
+    @And("checks the {string}")
+    public void checksThe(String messageElement) {
+        bekle(2);
+        WebElement elementToCheck = getElement(messageElement);
+        String textToCheck = elementToCheck.getText();
+        System.out.println("Text to check" + textToCheck);
+        assertTrue(textToCheck.contains("Başarıyla"));
+    }
+
+    @And("user type in {string} to {string} and enters")
+    public void userTypeInToAndEnters(String toWhere, String what) {
+        WebElement buttonToSend = getElement(toWhere);
+        wait.until(ExpectedConditions.visibilityOf(buttonToSend));
+        if (what.contains("configphone")) {
+            what = ConfigReader.getProperty("userphonenumber");
+        }
+        buttonToSend.sendKeys(what + Keys.ARROW_DOWN+Keys.ENTER);
+
+    }
+
+    @And("alerti kabul et")
+    public void alertiKabulEt() {
+        Driver.getDriver().switchTo().alert().accept();
     }
 }

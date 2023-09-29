@@ -27,6 +27,23 @@ Feature: AC1 User Able to Login and log out
     And user type in "temizlikButton" to chose one
     And click to "smokingYes"
     And click to "kaydet2"
+    And checks the "kayitOlusturulduMessage"
+    And click to "tamamButton"
+    And click to "evOdaBulInSignUp"
+    And click to "nextButton"
+    And user type in "odaMahalle" to "Kocaeli" and enters
+    And user type in "dateOfMove" to "31122023" and enters
+    And user type in "neKadarKalacaksiniz" to chose one
+    And user type in "kira" to "3000" and enters
+    And user type in "kuruSecin" to chose one
+    And user type in "yasAraligiSecin" to chose one
+    And user type in "arananCinsiyetiSecin" to chose one
+    And click to "tamamButton"
+    And click to "personalButton"
+    And click to "kisiselBilgilerim"
+    And click to "hesabiSil"
+    And alerti kabul et
+
 
   Scenario:  TC02a User who lend a house login
     And click to "personalButton"
@@ -37,9 +54,6 @@ Feature: AC1 User Able to Login and log out
     Given user opens phone
     And user goes and checks the sms
     And click to "devamEtButton"
-    And checks the "kayitOlusturulduMessage"//eklenecek
-    And click to "tamamButton"
-
 
 
   Scenario:  TC02b User who lend a house in and then can log out
@@ -57,7 +71,7 @@ Feature: AC1 User Able to Login and log out
 
 
   Scenario:  TC02a1 User who rent a house login
-    And click to "faceIcon"
+    And click to "ev/Odaİlanları"
     And click to "personalButton"
     And click to "girisYapButton"
     And user waits for "3"

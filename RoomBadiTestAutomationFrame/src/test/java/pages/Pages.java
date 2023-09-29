@@ -49,5 +49,23 @@ public class Pages {
         }
         return signUpPage;
     }
+
+    private SignUpOdaBul signUpOdaBul;
+
+    public SignUpOdaBul signUpOdaBul() {
+        if (signUpOdaBul == null) {
+            signUpOdaBul = new SignUpOdaBul();
+        }
+        return signUpOdaBul;
+    }
+
+    private ProfiliGoster profiliGoster;
+
+    public ProfiliGoster profiliGoster() {
+        if (profiliGoster == null) {
+            profiliGoster = new ProfiliGoster();
+        }
+        return profiliGoster;
+    }
 }
 //Step defition icerisinde fazla constructor kalabaligi olmamasi icin olusturulmustur
