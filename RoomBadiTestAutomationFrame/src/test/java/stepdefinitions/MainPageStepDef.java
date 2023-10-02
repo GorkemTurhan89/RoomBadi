@@ -297,7 +297,9 @@ public class MainPageStepDef extends ReusableMethods {
         if (what.contains("configphone")) {
             what = ConfigReader.getProperty("userphonenumber");
         }
-        buttonToSend.sendKeys(what + Keys.ARROW_DOWN + Keys.ENTER);
+        buttonToSend.sendKeys(what + Keys.ARROW_DOWN );
+        bekle(2);
+        buttonToSend.sendKeys(Keys.TAB);
 
     }
 

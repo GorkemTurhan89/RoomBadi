@@ -27,9 +27,8 @@ Feature: AC1 User Able to Login and log out
     And user type in "temizlikButton" to chose one
     And click to "smokingYes"
     And click to "kaydet2"
-    And change to "frame"
+   And user waits for "3"
     And checks the "kayitOlusturulduMessage"
-    And change to "parentFrame"
     And click to "tamamButton"
     And click to "evOdaBulInSignUp"
     And click to "nextButton"
@@ -45,6 +44,7 @@ Feature: AC1 User Able to Login and log out
     And click to "kisiselBilgilerim"
     And click to "hesabiSil"
     And alerti kabul et
+    And change to "parentFrame"
 
   Scenario: TC01b Hesap oluşturma
     And user waits for "3"
